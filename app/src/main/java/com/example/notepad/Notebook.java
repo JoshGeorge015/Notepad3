@@ -17,6 +17,7 @@ import java.io.OutputStreamWriter;
 
 public class Notebook extends AppCompatActivity {
     //joe is a retard
+    private EditText EditText1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,9 @@ public class Notebook extends AppCompatActivity {
 
 
         FloatingActionButton save = (FloatingActionButton) findViewById(R.id.save);
+
+
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,7 +44,7 @@ public class Notebook extends AppCompatActivity {
         try {
             OutputStreamWriter out =
                     new OutputStreamWriter(openFileOutput(fileName, 0));
-            out.write(EditText1);
+            out.write(String.valueOf(EditText1));
             out.close();
             Toast.makeText(this, "Note Saved!", Toast.LENGTH_SHORT).show();
         } catch (Throwable t) {
