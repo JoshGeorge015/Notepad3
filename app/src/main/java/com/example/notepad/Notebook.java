@@ -16,6 +16,7 @@ import java.io.OutputStreamWriter;
 
 
 public class Notebook extends AppCompatActivity {
+    //joe is a retard
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
