@@ -60,7 +60,7 @@ public class Login_Page extends AppCompatActivity {
                 if(resultSet1.getString(1).equals(password))
                 {
                     resultSet1.close();
-                    startActivity(new Intent(Login_Page.this, Succesfully_Logged_In.class));
+                    startActivity(new Intent(Login_Page.this, Notebook.class));
                 }
                 else
                 {
